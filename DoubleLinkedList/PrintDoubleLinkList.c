@@ -7,10 +7,9 @@ void vPrintDoubleLinkList(Student *Head) {
         return;
     }
 
-    printf("Data is : ");
     while(ItrPtr) {
-        printf("%d\t", ItrPtr->RollNo);
-        ItrPtr = ItrPtr->prev;
+        printf("Roll No.: %d\n", ItrPtr->RollNo);
+        ItrPtr = ItrPtr->next;
     }
     printf("\n");
     return;

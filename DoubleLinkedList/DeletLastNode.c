@@ -1,5 +1,5 @@
 
-#include "SingleLinkList.h"
+#include "DoubleLinkList.h"
 
 Student *vDeletLastNode (Student *Head) {
     Student *DeletLastNode = NULL, *SCurrentNode = Head;
@@ -15,14 +15,18 @@ Student *vDeletLastNode (Student *Head) {
             DeletLastNode = Head;
             Head = Head->next;
         }
-        if(Head->next) {
-            DeletLastNode->next = NULL;
-        }
+	if(DeletLastNode) {
+		DeletLastNode->next = NULL;
+	}
+        printf("Last Node data is : %d\n", Head->RollNo);
         printf("Delete node\n");
         Head->RollNo = 0;
         Head->next = NULL;
+        Head->prev = NULL;
         free(Head);
         Head = NULL;
+	
+	//DeletLastNode->next = NULL;
     }
 
     return SCurrentNode;

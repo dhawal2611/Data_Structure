@@ -12,9 +12,9 @@ void vPrintDoubleLinkListReverse(Student *Head) {
         ItrPtr = ItrPtr->next;
     }
 
-    printf("Data in Reverse order is : ");
+    printf("Data in Reverse order is : \n");
     while(ItrPtr) {
-        printf("%d\t", ItrPtr->RollNo);
+        printf("Roll No.: %d\n", ItrPtr->RollNo);
         ItrPtr = ItrPtr->prev;
     }
     printf("\n");

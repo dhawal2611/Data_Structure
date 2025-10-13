@@ -1,4 +1,4 @@
-#include "SingleLinkList.h"
+#include "DoubleLinkList.h"
 
 Student *SAddNodeAtInputLocation (Student *Head) {
     Student *TakeDataNode, *ItrNode;
@@ -9,7 +9,7 @@ Student *SAddNodeAtInputLocation (Student *Head) {
         return NULL;
     }
 
-    TakeDataNode = calloc(1, sizeof(struct SLL));
+    TakeDataNode = calloc(1, sizeof(Student));
 
     printf("Enter Roll No.: ");
     scanf("%d", &TakeDataNode->RollNo);
@@ -17,6 +17,7 @@ Student *SAddNodeAtInputLocation (Student *Head) {
     scanf("%d", &iRollToAddAfterIt);
 
     TakeDataNode->next = NULL;
+    TakeDataNode->prev = NULL;
 
     ItrNode = Head;
     iCnt++;
@@ -29,6 +30,7 @@ Student *SAddNodeAtInputLocation (Student *Head) {
     for(int iItr = 0; iItr < iCnt; iItr++) {
         if(ItrNode->RollNo == iRollToAddAfterIt) {
             TakeDataNode->next = ItrNode->next;
+            TakeDataNode->prev = ItrNode;
             ItrNode->next = TakeDataNode;
             return Head;
         }

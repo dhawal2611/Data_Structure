@@ -39,7 +39,7 @@ int main() {
             case 3:
                 S1 = SAddNodeAtBegin(S1);
                 break;
-            /*case 4:
+            case 4:
                 S1 = SAddNodeAtMiddle(S1);
                 break;
             case 5:
@@ -51,7 +51,7 @@ int main() {
             case 7:
                 S1 = vDeletLastNode(S1);
                 break;
-            case 8:
+            /*case 8:
                 S1 = SDeletNodeByInputLocation(S1);
                 break;
             case 9:

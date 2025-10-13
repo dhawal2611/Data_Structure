@@ -4,10 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SLL {
+typedef struct DLL {
     int RollNo;
-    struct SLL *next;
-    struct SLL *prev;
+    struct DLL *next;
+    struct DLL *prev;
 }Student;
 
 Student *SAddNodeAtEnd (Student *Head);

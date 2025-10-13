@@ -1,5 +1,5 @@
 
-#include "SingleLinkList.h"
+#include "DoubleLinkList.h"
 
 Student *SDeletFirstNode (Student *Head) {
     Student *DeletFirstNode = NULL;
@@ -16,10 +16,10 @@ Student *SDeletFirstNode (Student *Head) {
         }
         DeletFirstNode->RollNo = 0;
         DeletFirstNode->next = NULL;
+        DeletFirstNode->prev = NULL;
         free(DeletFirstNode);
         DeletFirstNode = NULL;
     }
 
     return Head;
-   
 }

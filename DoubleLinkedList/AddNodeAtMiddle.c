@@ -1,16 +1,17 @@
 
-#include "SingleLinkList.h"
+#include "DoubleLinkList.h"
 
 Student *SAddNodeAtMiddle (Student *Head) {
     Student *TakeDataNode, *ItrNode;
     int iCnt = 0;
 
-    TakeDataNode = calloc(1, sizeof(struct SLL));
+    TakeDataNode = calloc(1, sizeof(Student));
 
     printf("Enter Roll No.: ");
     scanf("%d", &TakeDataNode->RollNo);
 
     TakeDataNode->next = NULL;
+    TakeDataNode->prev = NULL;
 
     if(Head == NULL) {
         printf("Adding first Node\n");
@@ -36,6 +37,7 @@ Student *SAddNodeAtMiddle (Student *Head) {
             ItrNode = ItrNode->next;
         }
         TakeDataNode->next = ItrNode->next;
+        TakeDataNode->prev = ItrNode;
         ItrNode->next = TakeDataNode;
     }
 

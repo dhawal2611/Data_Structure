@@ -4,7 +4,7 @@
 Student *SAddNodeAtBegin (Student *Head) {
     Student *TakeDataNode;
 
-    TakeDataNode = calloc(1, sizeof(struct SLL));
+    TakeDataNode = calloc(1, sizeof(Student));
 
     printf("Enter Roll No.: ");
     scanf("%d", &TakeDataNode->RollNo);

@@ -1,7 +1,7 @@
 
-#include "SingleLinkList.h"
+#include "DoubleLinkList.h"
 
-Student *SDeletNodeByInputLocation (Student *Head) {
+Student *SDeletNodeByInputLocation(Student *Head) {
     Student *SPreviousNode = NULL, *ItrNode =  NULL;
     int iRollNumToDelet = 0, iCnt = 0;
 
@@ -29,8 +29,10 @@ Student *SDeletNodeByInputLocation (Student *Head) {
                 return Head;
             }
             SPreviousNode->next = ItrNode->next;
+            ItrNode->next->prev = SPreviousNode;
             ItrNode->RollNo = 0;
             ItrNode->next = NULL;
+            ItrNode->prev = NULL;
             free(ItrNode);
             ItrNode = NULL;
             printf("Node Deleted Successfully\n");
