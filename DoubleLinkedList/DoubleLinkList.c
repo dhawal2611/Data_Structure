@@ -49,12 +49,12 @@ int main() {
                 S1 = SDeletFirstNode(S1);
                 break;
             case 7:
-                S1 = vDeletLastNode(S1);
+                S1 = SDeletLastNode(S1);
                 break;
-            /*case 8:
+            case 8:
                 S1 = SDeletNodeByInputLocation(S1);
                 break;
-            case 9:
+            /*case 9:
                 vSearchAnElementInList(S1);
                 break;
             case 10:

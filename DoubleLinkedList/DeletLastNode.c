@@ -1,7 +1,7 @@
 
 #include "DoubleLinkList.h"
 
-Student *vDeletLastNode (Student *Head) {
+Student *SDeletLastNode (Student *Head) {
     Student *DeletLastNode = NULL, *SCurrentNode = Head;
 
     if(Head == NULL) {

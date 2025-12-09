@@ -17,7 +17,7 @@ Student *SAddNodeAtBegin (Student *Head);
 Student *SAddNodeAtMiddle (Student *Head);
 Student *SDeletFirstNode (Student *Head);
 Student *SAddNodeAtInputLocation (Student *Head);
-Student *vDeletLastNode(Student *Head);
+Student *SDeletLastNode(Student *Head);
 Student *SDeletNodeByInputLocation(Student *Head);
 void vSearchAnElementInList(Student *Head);
 Student *SSortList(Student *Head);

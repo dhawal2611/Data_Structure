@@ -28,7 +28,12 @@ Student *SDeletNodeByInputLocation(Student *Head) {
                 Head = SDeletFirstNode(Head);
                 return Head;
             }
-            SPreviousNode->next = ItrNode->next;
+	    if(ItrNode->next == NULL) {
+                Head = SDeletLastNode(Head);
+                return Head;
+
+	    }
+	    SPreviousNode->next = ItrNode->next;
             ItrNode->next->prev = SPreviousNode;
             ItrNode->RollNo = 0;
             ItrNode->next = NULL;
@@ -39,7 +44,8 @@ Student *SDeletNodeByInputLocation(Student *Head) {
             return Head;
         }
         SPreviousNode = ItrNode;
-        ItrNode = ItrNode->next;
+	if(ItrNode->next)
+		ItrNode = ItrNode->next;
     }
     printf("Invaild Roll Num. to Delet.\n\n");
     return Head;
