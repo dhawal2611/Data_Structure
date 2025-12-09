@@ -54,10 +54,10 @@ int main() {
             case 8:
                 S1 = SDeletNodeByInputLocation(S1);
                 break;
-            /*case 9:
+            case 9:
                 vSearchAnElementInList(S1);
                 break;
-            case 10:
+            /*case 10:
                 S1 = SSortList(S1);
                 break;
             case 12:
