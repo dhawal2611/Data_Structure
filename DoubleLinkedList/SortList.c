@@ -1,4 +1,4 @@
-#include "SingleLinkList.h"
+#include "DoubleLinkList.h"
 
 Student *SSortList (Student *Head) {
     if (Head == NULL) {
@@ -6,27 +6,27 @@ Student *SSortList (Student *Head) {
         return NULL;
     }
 
-    Student *SSorted = NULL;
+    int iTempSwap = 0;
 
     Student* SCurrent = Head;
-    while (SCurrent != NULL) {
-        Student* SNext = SCurrent->next;
-
-        if (SSorted == NULL || SSorted->RollNo > SCurrent->RollNo) {
-            SCurrent->next = SSorted;
-            SSorted = SCurrent;
-        } else {
-            Student* SItrNode = SSorted;
-            while (SItrNode->next != NULL && SItrNode->next->RollNo < SCurrent->RollNo) {
-                SItrNode = SItrNode->next;
-            }
-            SCurrent->next = SItrNode->next;
-            SItrNode->next = SCurrent;
-        }
-
-        SCurrent = SNext;
+    if(SCurrent->next == NULL) {
+	    printf("No Node to sort\n");
+	    return Head;
     }
-    Head = SSorted;
+
+    while (SCurrent != NULL) {
+	Student* STraverse = SCurrent->next;
+	while(STraverse) {
+		if (STraverse->RollNo < SCurrent->RollNo) {
+			iTempSwap = STraverse->RollNo;
+			STraverse->RollNo = SCurrent->RollNo;
+			SCurrent->RollNo = iTempSwap;
+	        }
+		STraverse = STraverse->next;
+	}
+
+        SCurrent = SCurrent->next;
+    }
     return Head;
 
 }

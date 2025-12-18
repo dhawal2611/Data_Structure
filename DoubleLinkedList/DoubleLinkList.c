@@ -57,10 +57,10 @@ int main() {
             case 9:
                 vSearchAnElementInList(S1);
                 break;
-            /*case 10:
+            case 10:
                 S1 = SSortList(S1);
                 break;
-            case 12:
+            /*case 12:
                 S1 = SReverseList(S1);
                 break;*/
             case 128:
